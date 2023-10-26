@@ -28,7 +28,7 @@ xset b off &
 # xargs xwallpaper --stretch < ~/.cache/wall &
 # ~/.fehbg &
 # feh --randomize --bg-fill ~/.cache/wall/* &
-feh --bg-fill ~/.local/share/wallpapers/wall2.jpg &
+feh --bg-fill ~/.local/share/wallpapers/wm/od_bspwm.png &
 # nitrogen --restore &
 
 #### MONITORS ####
