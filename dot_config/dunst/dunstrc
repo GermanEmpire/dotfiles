@@ -1,0 +1,12 @@
+[global]
+  monitor = 0
+  follow = mouse
+
+  geometry = "0x0-30+20"
+
+  frame_color = "#51afef"
+  background = "#282c34"
+
+  font = UbuntuMono Nerd Font Medium 10
+
+  icon_path = /usr/share/icons/Adwaita/16/status/:/usr/share/icons/Adwaita/16/devices/:/usr/share/icons/Adwaita/16/legacy/
