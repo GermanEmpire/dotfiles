@@ -1,5 +1,4 @@
 <div align="justify">
-
 <h1>Dotfiles</h1>
 <img alt="" src="showcase.png"/>
 <a>
@@ -17,6 +16,10 @@ A lot of configs taken from dt and changed for my daily use
 - **File Manager** :[ranger](https://github.com/ranger/ranger)
 - **GUI (Basic) IDE** :[Lunar Vim](https://github.com/LunarVim/LunarVim) With doom-one theme
 
-<samp>INSTALLATION</samp>
+<h2>INSTALLATION</h2>
 
-**You can install with installation [script]()**
+**You can install with installation [script](https://github.com/GermanEmpire/dotfiles/releases/tag/latest)**
+```sh
+chmod +x install.sh
+./install.sh
+```
