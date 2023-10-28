@@ -53,6 +53,14 @@ super + y
 super + m
 	bspc node -s biggest
 
+# Flameshot
+super + shift + s
+  flameshot gui
+
+# Ranger
+super + e
+  st -e ranger
+
 # STATE/FLAGS
 
 # set the window state
@@ -143,7 +151,7 @@ super + p; {c}
     dtos-colorscheme
 super + p; {shift + c}
     dm-colpick
-super + p; {e}
+super + shift + e
     dm-confedit
 super + p; {i}
     dm-maim

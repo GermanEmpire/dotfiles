@@ -15,8 +15,8 @@ COLORSCHEME="DoomOne"
 #### AUTOSTART ####
 dunst &
 sxhkd &
-killall nm-applet && nm-applet &
-killall volumeicon && volumeicon &
+nm-applet &
+volumeicon &
 killall conky &
 sleep 3 && conky -c "$HOME"/.config/conky/bspwm/doom-one-01.conkyrc &
 polybar mainbar-bspwm &
@@ -28,7 +28,7 @@ xset b off &
 # xargs xwallpaper --stretch < ~/.cache/wall &
 # ~/.fehbg &
 # feh --randomize --bg-fill ~/.cache/wall/* &
-feh --bg-fill ~/.local/share/wallpapers/wm/od_bspwm.png &
+feh --bg-fill ~/.local/share/wallpapers/misc/od_neon.png &
 # nitrogen --restore &
 
 #### MONITORS ####
