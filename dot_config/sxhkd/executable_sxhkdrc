@@ -173,3 +173,13 @@ super + p; {s}
     dm-websearch
 super + p; {t}
     dm-translate
+
+# volume and brightness control
+XF86MonBrightness{Up,Down}  
+    brightnessctl s 10%{+,-} 
+ 
+XF86Audio{Raise,Lower}Volume  
+    pulsemixer --change-volume {+,-}5  
+ 
+XF86AudioMute  
+    pulsemixer  --toggle-mute

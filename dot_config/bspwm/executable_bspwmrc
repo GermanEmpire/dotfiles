@@ -15,8 +15,8 @@ COLORSCHEME="DoomOne"
 #### AUTOSTART ####
 dunst &
 sxhkd &
-nm-applet &
-volumeicon &
+killall nm-applet && nm-applet &
+killall volumeicon && volumeicon &
 killall conky &
 sleep 3 && conky -c "$HOME"/.config/conky/bspwm/doom-one-01.conkyrc &
 polybar mainbar-bspwm &
