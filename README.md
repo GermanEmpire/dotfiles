@@ -1,1 +1,22 @@
-<h1>DOTFILES</h1>
+<div align="justify">
+
+<h1>Dotfiles</h1>
+<img alt="" src="showcase.png"/>
+<a>
+</a>
+<div align="left">
+  
+A lot of configs taken from dt and changed for my daily use
+  
+- **Window Manager** :[Bspwm](https://github.com/baskerville/bspwm)
+- **Panel** :[Polybar](https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/polybar) 
+- **Application Launcher** :[dmenu-distrotube](https://gitlab.com/dwt1/dmenu-distrotube.git)
+- **Desktop Notification** :[Dunst](https://github.com/dunst-project/dunst)
+- **Terminal Emulator** :[st](https://gitlab.com/dwt1/st-distrotube.git)
+- **Shell** :[bash](https://gitlab.com/dwt1/dotfiles.git)
+- **File Manager** :[ranger](https://github.com/ranger/ranger)
+- **GUI (Basic) IDE** :[Lunar Vim](https://github.com/LunarVim/LunarVim) With doom-one theme
+
+<samp>INSTALLATION</samp>
+
+**You can install with installation [script]()**
