@@ -13,48 +13,49 @@ if [[ $warning = "y" || $warning = "Y" ]]; then
   mkdir ~/installation
   cd ~/installation
 
-  printf "\nInstalling git\n"
-  sudo pacman --noconfirm --needed -S git base-devel
+  printf "\n\e[1;34mInstalling git\e[0m\n"
+  sudo pacman -q --noconfirm --needed -S git base-devel
 
-  printf "Installing yay\n"
+  printf "\e[1;34mInstalling yay\e[0m\n"
   if [[ $(command -v yay) = "" ]]; then
-    git clone https://aur.archlinux.org/yay.git
+    git clone -q https://aur.archlinux.org/yay.git
     cd yay
-    makepkg -si    
+    makepkg -si
   fi
 
-  printf "\e[1;34m${bold}Installing Dependencies:${normal}\n"
-  yay --noconfirm --needed -S bspwm sxhkd conky dunst polybar network-manager-applet volumeicon feh ranger dmenu dmscripts-git flameshot brightnessctl pulsemixer ttf-ubuntu-mono-nerd ttf-font-awesome ttf-hack-nerd ttf-joypixels chezmoi make libx11 bash-completion starship eza ttf-hack shell-color-scripts 
+  printf "\e[1;34m${bold}Installing Dependencies:${normal}\e[0m\n"
+  yay --noconfirm --needed -q -S bspwm sxhkd conky dunst polybar network-manager-applet volumeicon feh ranger dmenu dmscripts-git flameshot brightnessctl pulsemixer ttf-ubuntu-mono-nerd ttf-font-awesome ttf-hack-nerd ttf-joypixels chezmoi make libx11 bash-completion starship eza ttf-hack shell-color-scripts 
   
   mkdir ~/.config
-  git clone https://gitlab.com/dwt1/st-distrotube.git ~/.config/st
+  git clone -q https://gitlab.com/dwt1/st-distrotube.git ~/.config/st
 
-  git clone https://gitlab.com/dwt1/dmenu-distrotube.git
+  git clone -q https://gitlab.com/dwt1/dmenu-distrotube.git
   cd dmenu-distrotube
-  sudo make clean install && rm config.h
+  sudo make clean install -s && rm config.h
 
-  printf "${bold}Copying Dotfiles:${normal}\n"
+  printf "\e[1;34m${bold}Copying Dotfiles:${normal}\e[0m\n"
   chezmoi init https://github.com/GermanEmpire/dotfiles.git
   chezmoi apply --force
 
-  printf "${bold}Building st:${normal}\n"
+  printf "\e[1;34m${bold}Building st:${normal}\e[0m\n"
   cd ~/.config/st
-  sudo make install
+  sudo make install -s
 
-  printf "\e[1;34m${bold}Do you want to install lunar vim${normal} [y,n]: "
+  printf "\e[1;34m${bold}Do you want to install lunar vim${normal}\e[0m [y,n]: "
   read lvim
   if [[ $lvim = "y" || $lvim = "Y" ]]; then
-     yay --noconfirm --needed -S pip python npm cargo neovim 
-     bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+     yay -q --noconfirm --needed -S pip python npm cargo neovim tree-sitter-cli python-pynvim fd ripgrep
+     bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) --no-install-dependencies
   fi
 
-  printf "\n${bold}Cleaning installation dir:${normal}\n"
+  printf "\n\e[1;34m${bold}Cleaning installation dir:${normal}\n"
   rm -rf ~/installation
 
   printf "\e[1;32m${bold}Installation Done${normal}\e[0m \n"
+  printf "\e[1;33m${bold}Warning: polybar and bspwm configs writed for my display${normal}\e[0m \n"
   exit
 
 else
-  printf "Exiting"
+  printf "\e[1;31mExiting\e[0m\n"
   exit
 fi
