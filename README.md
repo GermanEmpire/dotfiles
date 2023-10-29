@@ -18,7 +18,7 @@ A lot of configs taken from dt and changed for my daily use
 
 <h2>INSTALLATION</h2>
 
-**You can install with installation [script](https://github.com/GermanEmpire/dotfiles/releases/tag/latest)**
+**You can install with installation [script](https://github.com/GermanEmpire/dotfiles/releases/tag/script)**
 ```sh
 chmod +x install.sh
 ./install.sh
