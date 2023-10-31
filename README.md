@@ -14,7 +14,7 @@ A lot of configs taken from dt and changed for my daily use
 - **Terminal Emulator** :[st](https://gitlab.com/dwt1/st-distrotube.git)
 - **Shell** :[bash](https://gitlab.com/dwt1/dotfiles.git)
 - **File Manager** :[ranger](https://github.com/ranger/ranger)
-- **GUI (Basic) IDE** :[Lunar Vim](https://github.com/LunarVim/LunarVim) With doom-one theme
+- **TEXT EDITOR** :[Lunar Vim](https://github.com/LunarVim/LunarVim) With doom-one theme
 
 <h2>INSTALLATION</h2>
 
