@@ -1,16 +1,3 @@
-#!/usr/bin/env bash
-#  ____ _____
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |  	http://www.youtube.com/c/DistroTube
-# | |_| || |  	http://www.gitlab.com/dwt1/ 
-# |____/ |_|  	
-#        
-# A customized sxhkdrc for the bspwm window manager.
-# https://github.com/baskerville/sxhkd
-# https://github.com/baskerville/bspwm
-
-### WM INDEPENDENT KEYBINDINGS ###
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -23,11 +10,11 @@ super + Return
 
 # run program launcher
 super + a
-	dmenu_run
+	$HOME/.config/rofi/launchers/type-1/launcher.sh
 
 # quit/restart bspwm
 super + shift + q
-	dm-logout
+	$HOME/.config/rofi/powermenu/type-1/powermenu.sh
 
 # quit/restart bspwm
 super + shift + r

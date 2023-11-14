@@ -24,14 +24,10 @@ if [[ $warning = "y" || $warning = "Y" ]]; then
   fi
 
   printf "\e[1;34m${bold}Installing Dependencies:${normal}\e[0m\n"
-  yay --noconfirm --needed -q -S bspwm sxhkd conky dunst polybar network-manager-applet volumeicon feh ranger dmenu dmscripts-git flameshot brightnessctl pulsemixer ttf-ubuntu-mono-nerd ttf-font-awesome ttf-hack-nerd ttf-joypixels chezmoi make libx11 bash-completion starship eza ttf-hack shell-color-scripts 
+  yay --noconfirm --needed -q -S bspwm sxhkd conky dunst polybar network-manager-applet volumeicon feh ranger flameshot brightnessctl pulsemixer ttf-ubuntu-mono-nerd ttf-font-awesome ttf-hack-nerd ttf-joypixels chezmoi make libx11 bash-completion starship eza ttf-hack shell-color-scripts ttf-icomoon-feather-git ttf-iosevka-nerd bat 
   
   mkdir ~/.config
   git clone -q https://gitlab.com/dwt1/st-distrotube.git ~/.config/st
-
-  git clone -q https://gitlab.com/dwt1/dmenu-distrotube.git
-  cd dmenu-distrotube
-  sudo make clean install -s && rm config.h
 
   printf "\e[1;34m${bold}Copying Dotfiles:${normal}\e[0m\n"
   chezmoi init https://github.com/GermanEmpire/dotfiles.git
