@@ -9,7 +9,7 @@ A lot of configs taken from dt and changed for my daily use
   
 - **Window Manager** :[Bspwm](https://github.com/baskerville/bspwm)
 - **Panel** :[Polybar](https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/polybar) 
-- **Application Launcher** :[dmenu-distrotube](https://gitlab.com/dwt1/dmenu-distrotube.git)
+- **Application Launcher** :[rofi](https://github.com/adi1090x/rofi/tree/master)
 - **Desktop Notification** :[Dunst](https://github.com/dunst-project/dunst)
 - **Terminal Emulator** :[st](https://gitlab.com/dwt1/st-distrotube.git)
 - **Shell** :[bash](https://gitlab.com/dwt1/dotfiles.git)
