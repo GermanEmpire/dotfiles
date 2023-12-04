@@ -9,7 +9,8 @@
 ### EXPORT
 export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
-export ALTERNATE_EDITOR=""                        
+export ALTERNATE_EDITOR=""
+export VISUAL="lvim"
 export EDITOR="lvim"
 # $EDITOR use Emacs in terminal
 ### SET MANPAGER

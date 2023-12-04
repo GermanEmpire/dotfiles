@@ -19,6 +19,8 @@ killall nm-applet &
 sleep 3 && nm-applet &
 killall volumeicon &
 sleep 3 && volumeicon &
+killall kdeconnect-indicator &
+sleep 3 && kdeconnect-indicator &
 killall conky &
 sleep 3 && conky -c "$HOME"/.config/conky/bspwm/doom-one-01.conkyrc &
 polybar mainbar-bspwm &

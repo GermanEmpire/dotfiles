@@ -46,7 +46,11 @@ super + shift + s
 
 # Ranger
 super + e
-  st -e ranger
+  st ranger
+
+# Btop
+ctrl + shift + Escape
+  st btop
 
 # STATE/FLAGS
 
