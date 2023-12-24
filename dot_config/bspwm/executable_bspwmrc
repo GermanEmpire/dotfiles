@@ -17,14 +17,11 @@ dunst &
 sxhkd &
 killall nm-applet &
 sleep 3 && nm-applet &
-killall volumeicon &
-sleep 3 && volumeicon &
 killall kdeconnect-indicator &
 sleep 3 && kdeconnect-indicator &
 killall conky &
 sleep 3 && conky -c "$HOME"/.config/conky/bspwm/doom-one-01.conkyrc &
-polybar mainbar-bspwm &
-polybar mainbar-bspwm-second &
+exec $HOME/.config/polybar/launch.sh &
 xrandr --output HDMI-1 --left-of eDP-1 &
 xset b off &
 
@@ -39,7 +36,7 @@ feh --bg-fill ~/.local/share/wallpapers/misc/od_neon.png &
 for monitor in $(bspc query -M)
 do
     # set the workspaces on each monitor to 1-9
-    bspc monitor $monitor -d 1 2 3 4 5 6 7 8 9
+    bspc monitor $monitor -d 1 2 3 4 5
     #polybar hidden when fullscreen for vlc, youtube, mpv ...
     xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_$monitor)
 done
