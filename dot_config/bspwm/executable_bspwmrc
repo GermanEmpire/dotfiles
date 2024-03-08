@@ -1,15 +1,5 @@
 #!/usr/bin/env bash
-#  ____ _____ 
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |  	http://www.youtube.com/c/DistroTube
-# | |_| || |  	http://www.gitlab.com/dwt1/ 
-# |____/ |_|  	
-#        
-# A customized bspwmrc for the bspwm window manager.
-# https://github.com/baskerville/sxhkd
-# https://github.com/baskerville/bspwm
 
-#### VARIABLES ####
 COLORSCHEME="DoomOne"
 
 #### AUTOSTART ####
@@ -22,15 +12,9 @@ sleep 3 && kdeconnect-indicator &
 killall conky &
 sleep 3 && conky -c "$HOME"/.config/conky/bspwm/doom-one-01.conkyrc &
 exec $HOME/.config/polybar/launch.sh &
-xrandr --output HDMI-1 --left-of eDP-1 &
+xrandr --output Virtual-1 --mode 1920x1080
 xset b off &
-
-### Select only ONE of the following four ways to set the wallpaper.
-# xargs xwallpaper --stretch < ~/.cache/wall &
-# ~/.fehbg &
-# feh --randomize --bg-fill ~/.cache/wall/* &
 feh --bg-fill ~/.local/share/wallpapers/misc/od_neon.png &
-# nitrogen --restore &
 
 #### MONITORS ####
 for monitor in $(bspc query -M)
