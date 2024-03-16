@@ -12,7 +12,7 @@ sleep 3 && kdeconnect-indicator &
 killall conky &
 sleep 3 && conky -c "$HOME"/.config/conky/bspwm/doom-one-01.conkyrc &
 exec $HOME/.config/polybar/launch.sh &
-xrandr --output Virtual-1 --mode 1920x1080
+xrandr --output HDMI-1 --mode 1920x1080 --left-of eDP-1
 xset b off &
 feh --bg-fill ~/.local/share/wallpapers/misc/od_neon.png &
 
