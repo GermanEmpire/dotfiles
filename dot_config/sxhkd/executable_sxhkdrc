@@ -50,7 +50,7 @@ super + e
 
 # Btop
 ctrl + shift + Escape
-  st btop
+  st htop
 
 # STATE/FLAGS
 
@@ -66,10 +66,10 @@ super + ctrl + {m,x,y,z}
 
 # focus the node in the given direction
 super + {Left,Right,Up,Down}
-	bspc node -f {west,south,north,east}
+	bspc node -f {west,east,north,south}
 
-super {_,shift + }{Left,Right,Up,Down}
-	bspc node -s {west,south,north,east}
+super + shift + {Left,Right,Up,Down}
+	bspc node -s {west,east,north,south}
 
 # focus the node for the given path jump
 super + {shift + p, shift + b, ctrl + f, ctrl + s}
@@ -80,11 +80,11 @@ super + {_,shift + }
 	bspc node -f {next,prev}.local
 
 # focus the next/previous monitor
-super + {comma, period}
-    bspc monitor -f {prev,next}
+super + comma
+    bspc monitor -f next
 
-super + {shift + comma, shift + period}
-    bspc node -s {prev,next}
+super + shift + period
+    bspc node -s next
 
 # focus the last node/desktop
 super + {shift + Tab,Tab}
@@ -132,38 +132,6 @@ ctrl + alt + l
 # launch qutebrowser
 super + b
     thorium-browser
-
-# dmscripts (SUPER + p followed by another key)
-super + p; {a}
-    dm-sounds
-super + p; {b}
-    dm-setbg
-super + p; {c}
-    dtos-colorscheme
-super + p; {shift + c}
-    dm-colpick
-super + shift + e
-    dm-confedit
-super + p; {i}
-    dm-maim
-super + p; {k}
-    dm-kill
-super + p; {m}
-    dm-man
-super + p; {n}
-    dm-note
-super + p; {o}
-    dm-bookman
-super + p; p
-    passmenu -p Pass:
-super + p; {q}
-    dm-logout
-super + p; {r}
-    dm-radio
-super + p; {s}
-    dm-websearch
-super + p; {t}
-    dm-translate
 
 # volume and brightness control
 XF86MonBrightness{Up,Down}  
