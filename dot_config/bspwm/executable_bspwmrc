@@ -11,10 +11,11 @@ killall kdeconnect-indicator &
 sleep 3 && kdeconnect-indicator &
 killall conky &
 sleep 3 && conky -c "$HOME"/.config/conky/bspwm/doom-one-01.conkyrc &
-exec $HOME/.config/polybar/launch.sh &
-xrandr --output HDMI-1 --mode 1920x1080 --left-of eDP-1
+xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1 &
+killall polybar &
+sleep 3 && exec $HOME/.config/polybar/launch.sh &
 xset b off &
-feh --bg-fill ~/.local/share/wallpapers/misc/od_neon.png &
+feh --bg-fill ~/.local/share/wallpapers/misc/od_neon.png & 
 
 #### MONITORS ####
 for monitor in $(bspc query -M)
@@ -28,8 +29,6 @@ done
 #polybar hidden when fullscreen for vlc, youtube, mpv ...
 #find out the name of your monitor with xrandr
 # xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DisplayPort-0)
-# xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DisplayPort-1)
-# xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI-A-0)
 
 #### BSPWM configuration ####
 #bspc config border_radius                8
