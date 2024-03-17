@@ -24,7 +24,8 @@ if [[ $warning = "y" || $warning = "Y" ]]; then
   fi
 
   printf "\e[1;34m${bold}Installing Dependencies:${normal}\e[0m\n"
-  yay --noconfirm --needed -q -S bspwm sxhkd conky dunst polybar network-manager-applet volumeicon feh ranger flameshot brightnessctl pulsemixer ttf-ubuntu-mono-nerd ttf-font-awesome ttf-hack-nerd ttf-joypixels chezmoi make libx11 bash-completion starship eza ttf-hack shell-color-scripts ttf-icomoon-feather-git ttf-iosevka-nerd bat rofi xclip
+  yay --noconfirm --needed -q -S bspwm sxhkd conky dunst polybar network-manager-applet volumeicon feh ranger flameshot brightnessctl pulsemixer ttf-ubuntu-mono-nerd ttf-font-awesome ttf-hack-nerd ttf-joypixels chezmoi make libx11 bash-completion starship eza ttf-hack shell-color-scripts ttf-icomoon-feather-git ttf-iosevka-nerd bat rofi xclip sed adw-gtk3
+
   
   mkdir ~/.config
   git clone -q https://gitlab.com/dwt1/st-distrotube.git ~/.config/st
@@ -40,8 +41,8 @@ if [[ $warning = "y" || $warning = "Y" ]]; then
   printf "\e[1;34m${bold}Do you want to install lunar vim${normal}\e[0m [y,n]: "
   read lvim
   if [[ $lvim = "y" || $lvim = "Y" ]]; then
-     yay -q --noconfirm --needed -S pip python npm cargo neovim tree-sitter-cli python-pynvim fd ripgrep
-     bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) --no-install-dependencies
+    yay -q --noconfirm --needed -S pip python npm cargo neovim tree-sitter-cli python-pynvim fd ripgrep
+    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) --no-install-dependencies
   fi
 
   printf "\n\e[1;34m${bold}Cleaning installation dir:${normal}\n"
