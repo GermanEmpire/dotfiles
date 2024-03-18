@@ -24,7 +24,7 @@ if [[ $warning = "y" || $warning = "Y" ]]; then
   fi
 
   printf "\e[1;34m${bold}Installing Dependencies:${normal}\e[0m\n"
-  yay --noconfirm --needed -q -S bspwm sxhkd conky dunst polybar network-manager-applet volumeicon feh ranger flameshot brightnessctl pulsemixer ttf-ubuntu-mono-nerd ttf-font-awesome ttf-hack-nerd ttf-joypixels chezmoi make libx11 bash-completion starship eza ttf-hack shell-color-scripts ttf-icomoon-feather-git ttf-iosevka-nerd bat rofi xclip sed adw-gtk3 zafiro-icon-theme
+  yay --noconfirm --needed -q -S bspwm sxhkd conky dunst polybar network-manager-applet volumeicon feh ranger flameshot brightnessctl pulsemixer ttf-ubuntu-mono-nerd ttf-font-awesome ttf-hack-nerd ttf-joypixels chezmoi make libx11 bash-completion starship eza ttf-hack shell-color-scripts ttf-icomoon-feather-git ttf-iosevka-nerd bat rofi xclip sed adw-gtk3 zafiro-icon-theme gksu
 
   
   mkdir ~/.config
