@@ -10,6 +10,9 @@ printf "\e[1;33mThis script writed for arch\n"
 printf "Warning this script will override your config do you want to install [y,n]: \e[0m"
 read warning
 if [[ $warning = "y" || $warning = "Y" ]]; then
+  printf "\n\e[1;34mUpgrading System\e[0m\n"
+  sudo pacman -q --noconfirm -Syu
+
   mkdir ~/installation
   cd ~/installation
 
