@@ -12,6 +12,9 @@ super + Return
 super + a
 	$HOME/.config/rofi/launchers/type-1/launcher.sh
 
+super + shift + a
+  $HOME/.config/rofi/launchers/type-1/launcher-sudo.sh
+
 # quit/restart bspwm
 super + shift + q
 	$HOME/.config/rofi/powermenu/type-1/powermenu.sh
@@ -50,7 +53,7 @@ super + e
 
 # Btop
 ctrl + shift + Escape
-  st htop
+  st btop
 
 # STATE/FLAGS
 
