@@ -5,8 +5,6 @@
 </a>
 <div align="left">
   
-A lot of configs taken from dt and changed for my daily use
-  
 - **Window Manager** :[Bspwm](https://github.com/baskerville/bspwm)
 - **Panel** :[Polybar](https://github.com/adi1090x/polybar-themes) With doom-one theme
 - **Application Launcher** :[rofi](https://github.com/adi1090x/rofi/tree/master)
