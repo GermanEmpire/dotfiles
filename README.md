@@ -20,11 +20,11 @@
 
 For arch
 ```sh
-chmod +x install.sh
+chmod +x install-arch.sh
 ./install-arch.sh
 ```
 For debian
 ```sh
-chmod +x install.sh
+chmod +x install-debian.sh
 ./install-debian.sh
 ```
