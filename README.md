@@ -16,8 +16,14 @@
 
 <h2>INSTALLATION</h2>
 
-**You can install with installation script**
+**You can install with installation scripts**
+For arch
 ```sh
 chmod +x install.sh
-./install.sh
+./install-arch.sh
+```
+For debian
+```sh
+chmod +x install.sh
+./install-debian.sh
 ```
