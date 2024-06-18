@@ -23,10 +23,17 @@ if [[ $warning = "y" || $warning = "Y" ]]; then
   sudo nala install --assume-yes git
 
   printf "\e[1;34m${bold}Installing Dependencies:${normal}\e[0m\n"
-  sudo nala install --assume-yes bspwm sxhkd conky-all dunst polybar feh ranger flameshot brightnessctl pulsemixer make bash-completion eza bat rofi xclip sed libharfbuzz-dev libxft-dev pkg-config volumeicon-alsa libx11-6 network-manager-gnome
+  sudo nala install --assume-yes bspwm gcc sxhkd conky-all dunst polybar feh ranger flameshot brightnessctl pulsemixer make bash-completion gpg bat rofi xclip sed libharfbuzz-dev libxft-dev pkg-config volumeicon-alsa libx11-6 network-manager-gnome curl
+
+  sudo mkdir -p /etc/apt/keyrings
+  wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+  echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+  sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+  sudo apt update
+  sudo apt install -y eza
 
   sh -c "$(curl -fsLS get.chezmoi.io)"
-  sudo cp ~/bin/chezmoi /bin/
+  sudo cp bin/chezmoi /bin/
 
   mkdir ~/.config
   git clone -q https://gitlab.com/dwt1/st-distrotube.git ~/.config/st
@@ -42,7 +49,8 @@ if [[ $warning = "y" || $warning = "Y" ]]; then
   printf "\e[1;34m${bold}Do you want to install lunar vim${normal}\e[0m [y,n]: "
   read lvim
   if [[ $lvim = "y" || $lvim = "Y" ]]; then
-    sudo nala install --assume-yes pip python3 npm cargo tree-sitter-cli python3-pynvim fd-find ripgrep cmake gettext
+    sudo nala install --assume-yes pip python3 npm cargo python3-pynvim fd-find ripgrep cmake gettext
+    cargo install tree-sitter-cli
     cd ~/installation
     git clone https://github.com/neovim/neovim.git
     cd neovim 
