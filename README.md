@@ -16,7 +16,7 @@
 
 <h2>INSTALLATION</h2>
 
-**You can install with installation [script](https://github.com/GermanEmpire/dotfiles/releases/tag/script)**
+**You can install with installation script**
 ```sh
 chmod +x install.sh
 ./install.sh
