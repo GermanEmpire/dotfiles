@@ -17,6 +17,7 @@
 <h2>INSTALLATION</h2>
 
 **You can install with installation scripts**
+
 For arch
 ```sh
 chmod +x install.sh
