@@ -49,7 +49,7 @@ super + shift + s
 
 # Ranger
 super + e
-  st ranger
+  thunar
 
 # Btop
 ctrl + shift + Escape

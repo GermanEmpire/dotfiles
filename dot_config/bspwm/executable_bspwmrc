@@ -9,8 +9,6 @@ killall nm-applet &
 sleep 3 && nm-applet &
 killall kdeconnect-indicator &
 sleep 3 && kdeconnect-indicator &
-killall conky &
-sleep 3 && conky -c "$HOME"/.config/conky/bspwm/doom-one-01.conkyrc &
 xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1 &
 killall polybar &
 sleep 3 && exec $HOME/.config/polybar/launch.sh &
