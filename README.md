@@ -11,7 +11,6 @@
 - **Desktop Notification** :[Dunst](https://github.com/dunst-project/dunst)
 - **Terminal Emulator** :[st](https://gitlab.com/dwt1/st-distrotube.git)
 - **Shell** :[bash](https://gitlab.com/dwt1/dotfiles.git)
-- **File Manager** :[ranger](https://github.com/ranger/ranger)
 - **Text Editor** :[Lunar Vim](https://github.com/LunarVim/LunarVim) with doom-one theme
 
 <h2>INSTALLATION</h2>
