@@ -13,7 +13,9 @@ xrandr --output HDMI-0 --mode 1920x1080 -r 144&
 killall polybar &
 sleep 3 && exec $HOME/.config/polybar/launch.sh &
 xset b off &
-feh --bg-fill ~/.local/share/wallpapers/misc/od_neon.png & 
+feh --bg-fill ~/.local/share/wallpapers/misc/od_neon.png &
+killall picom &
+sleep 3 && picom &
 
 #### MONITORS ####
 for monitor in $(bspc query -M)
