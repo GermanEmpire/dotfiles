@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 ## Author : Aditya Shakya (adi1090x)
 ## Github : @adi1090x
@@ -11,11 +11,13 @@
 ## style-6     style-7     style-8     style-9     style-10
 ## style-11    style-12    style-13    style-14    style-15
 
-dir="$HOME/.config/rofi/launchers/type-1"
+dir="$HOME/.config/rofi/password/type-1"
 theme='style-1'
 
 ## Run
-rofi \
-    -show drun \
-    -theme ${dir}/${theme}.rasi \
-    -run-command 'sudo -A {cmd}'
+
+rofi -dmenu \
+	-password \
+	-no-fixed-num-lines \
+  -theme ${dir}/${theme}.rasi \
+	-p "$(printf "$1" | sed s/://)"

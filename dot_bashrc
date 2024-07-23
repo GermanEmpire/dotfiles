@@ -12,6 +12,7 @@ export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR=""
 export VISUAL="lvim"
 export EDITOR="lvim"
+export SUDO_ASKPASS="$HOME/.config/rofi/password/type-1/password.sh"
 # $EDITOR use Emacs in terminal
 ### SET MANPAGER
 ### Uncomment only one of these!
